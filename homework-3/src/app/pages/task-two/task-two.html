@@ -1,0 +1,36 @@
+<p>task-two works!</p>
+<h2>Завдання 2: Зміна кольору тла через радіо-кнопки</h2>
+
+<!-- Параграф, колір тла якого прив'язаний до сигналу bgColor() -->
+<p 
+  class="color-paragraph" 
+  [style.backgroundColor]="bgColor()"
+  [style.color]="bgColor() === 'gold' || bgColor() === '#f1f5f9' ? '#0f172a' : '#ffffff'">
+  <!-- Цей параграф змінює свій колір тла залежно від вибраного радіо-інпута!
+  для того, щоб на яскравому золотому тлі текст ставав темним (бо білі літери на золотому фоні погано читаються).  -->
+  <br>
+  <strong>Поточний колір: {{ bgColor() }}</strong>
+</p>
+
+<!-- Чотири теги input з типом radio -->
+<div class="radio-group">
+  <label class="radio-label">
+    <input type="radio" name="bg-color" value="blue" (change)="changeColor('blue')" />
+    Синій (Blue)
+  </label>
+
+  <label class="radio-label">
+    <input type="radio" name="bg-color" value="red" (change)="changeColor('red')" />
+    Червоний (Red)
+  </label>
+
+  <label class="radio-label">
+    <input type="radio" name="bg-color" value="green" (change)="changeColor('green')" />
+    Зелений (Green)
+  </label>
+
+  <label class="radio-label">
+    <input type="radio" name="bg-color" value="gold" (change)="changeColor('gold')" />
+    Золотий (Gold)
+  </label>
+</div>

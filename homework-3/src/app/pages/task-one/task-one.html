@@ -1,0 +1,24 @@
+<p>task-one works!</p>
+<h2>Завдання 1: Список із масиву та обробник кліку</h2>
+<p>Натисніть на будь-який пункт списку нижче:</p>
+
+<ul class="list">
+  @for (item of items; track item) {
+    <li 
+      class="list-item" 
+      [class.active]="selectedItem() === item"
+      (click)="selectItem(item)">
+      {{ item }}
+    </li>
+  }
+</ul>
+
+<!-- Окремий елемент, який відображає контент останнього натиснутого пункту -->
+<div class="result-box">
+  @if (selectedItem()) {
+    <strong>Останній натиснутий пункт:</strong>
+    <p>{{ selectedItem() }}</p>
+  } @else {
+    <span class="placeholder">Ви ще не натиснули жодного пункту списку.</span>
+  }
+</div>

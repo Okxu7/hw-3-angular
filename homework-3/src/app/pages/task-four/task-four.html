@@ -1,0 +1,36 @@
+<p>task-four works!</p>
+<!-- 
+  Шаблон компонента (`task-four.html`) -->
+ 
+<!-- <h3>Завдання 4: Видалення елемента з DOM при натисканні</h3>
+
+<!-- Блок відображається у DOM лише тоді, коли isElementInDom() дорівнює true -->
+<!-- @if (isElementInDom()) {
+  <div 
+    class="deletable-box" 
+    (click)="removeItem()">
+    Натисни на мене, і я повністю зникну з DOM-дерева!
+  </div>
+} @else { -->
+  <!-- Кнопка, щоб повернути елемент назад на сторінку -->
+  <!-- <button (click)="restoreItem()" class="restore-btn">
+    Повернути елемент у DOM
+  </button>
+}
+  --> 
+
+  <h3>Завдання 4: Плавне зникнення перед видаленням з DOM</h3>
+
+@if (isElementInDom()) {
+  <!-- Додаємо динамічний клас [class.fade-out], коли isHiding стає true -->
+  <div 
+    class="deletable-box" 
+    [class.fade-out]="isHiding()" 
+    (click)="removeItem()">
+    Натисни на мене, і я плавно зникну перед видаленням з DOM!
+  </div>
+} @else {
+  <button (click)="restoreItem()" class="restore-btn">
+    Повернути елемент у DOM
+  </button>
+}

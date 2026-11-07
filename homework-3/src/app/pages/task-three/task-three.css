@@ -1,0 +1,31 @@
+
+h1 {
+  text-align: center;
+  color: #263b70;
+  margin-bottom: 25px;
+}
+
+section {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d5dbea;
+  border-radius: 8px;
+  background-color: #f8faff;
+}
+
+h2 {
+  color: #3156a3;
+  font-size: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+pre {
+  background: #e9edf5;
+  padding: 12px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,72 @@
+
+/*  Стилі (`task-four.css`)
+  */
+/* .deletable-box {
+  padding: 24px;
+  background-color: #fca5a5;
+  color: #7f1d1d;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px dashed #dc2626;
+  transition: background-color 0.2s ease;
+}
+
+.deletable-box:hover {
+  background-color: #f87171;
+}
+
+.restore-btn {
+  padding: 10px 20px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.restore-btn:hover {
+  background-color: #0369a1;
+} */
+
+.deletable-box {
+  padding: 24px;
+  background-color: #fca5a5;
+  color: #7f1d1d;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px dashed #dc2626;
+  
+  /* Налаштування плавності для появи та зникнення */
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+
+.deletable-box:hover {
+  background-color: #f87171;
+}
+
+/* Клас, який спрацьовує перед видаленням */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.9); /* елемент трохи зменшується під час зникнення */
+}
+
+.restore-btn {
+  padding: 10px 20px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.restore-btn:hover {
+  background-color: #0369a1;
+}

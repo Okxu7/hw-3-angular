@@ -1,0 +1,121 @@
+
+<h1>Angular Built-in Pipes</h1>
+
+<h2>1. Текстові Pipes</h2>
+
+<ul>
+  <li>
+    <b>uppercase</b> — великі літери:
+    <code>{{ '{{ text | uppercase }}' }}</code>
+    <br>
+    Результат: {{ textLow | uppercase }}
+  </li>
+
+  <li>
+    <b>lowercase</b> — малі літери:
+    <code>{{ '{{ text | lowercase }}' }}</code>
+    <br>
+    Результат: {{ textUpper | lowercase }}
+  </li>
+
+  <li>
+    <b>titlecase</b> — перша літера кожного слова велика:
+    <code>{{ '{{ text | titlecase }}' }}</code>
+    <br>
+    Результат: {{ textTitle | titlecase }}
+  </li>
+</ul>
+
+<h2>2. Числові Pipes</h2>
+
+<ul>
+  <li>
+    <b>decimal</b> — форматування числа:
+    <code>{{ "{{ number | number:'1.2-2' }}" }}</code>
+    <br>
+    Результат: {{ amount | number:'1.2-2' }}
+  </li>
+
+  <li>
+    <b>percent</b> — відсотки:
+    <code>{{ '{{ number | percent }}' }}</code>
+    <br>
+    Результат: {{ progress | percent }}
+  </li>
+
+  <li>
+    <b>currency</b> — валюта:
+    <code>{{ "{{ price | currency:'USD' }}" }}</code>
+    <br>
+    Результат: {{ price | currency:'USD' }}
+  </li>
+</ul>
+
+<h2>3. Дата</h2>
+
+<ul>
+  <li>
+    <b>date</b> — форматування дати:
+    <code>{{ "{{ today | date:'dd.MM.yyyy' }}" }}</code>
+    <br>
+    Результат: {{ today | date:'dd.MM.yyyy' }}
+  </li>
+</ul>
+
+<h2>4. Об'єкти та масиви</h2>
+
+<ul>
+  <li>
+    <b>json</b> — перетворення об'єкта в JSON:
+    <code>{{ '{{ user | json }}' }}</code>
+    <br>
+    Результат:
+    <pre>{{ user | json }}</pre>
+  </li>
+
+  <li>
+    <b>slice</b> — частина масиву:
+    <code>{{ '{{ fruits | slice:0:2 }}' }}</code>
+    <br>
+    Результат: {{ fruits | slice:0:2 }}
+  </li>
+
+  <li>
+    <b>keyvalue</b> — перебір властивостей об'єкта:
+    <code>{{ '{{ userInfo | keyvalue }}' }}</code>
+    <br>
+    Результат:
+    @for (item of userInfo | keyvalue; track item.key) {
+      <p>{{ item.key }}: {{ item.value }}</p>
+    }
+  </li>
+</ul>
+
+<h2>5. Асинхронні дані</h2>
+
+<ul>
+  <li>
+    <b>async</b> — отримання значення Promise:
+    <code>{{ '{{ messagePromise | async }}' }}</code>
+    <br>
+    Результат: {{ messagePromise | async }}
+  </li>
+</ul>
+
+<h2>6. Локалізація тексту</h2>
+
+<ul>
+  <li>
+    <b>i18nPlural</b> — текст залежно від кількості:
+    <code>{{ '{{ taskCount | i18nPlural:taskMapping }}' }}</code>
+    <br>
+    Результат: {{ taskCount | i18nPlural:taskMapping }}
+  </li>
+
+  <li>
+    <b>i18nSelect</b> — текст залежно від значення:
+    <code>{{ '{{ gender | i18nSelect:genderMapping }}' }}</code>
+    <br>
+    Результат: {{ gender | i18nSelect:genderMapping }}
+  </li>
+</ul>
